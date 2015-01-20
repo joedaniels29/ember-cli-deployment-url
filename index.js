@@ -12,8 +12,8 @@ var deploymentURLConfigDefaults = {
 function contentString(jsPrefix, cssPrefix) {
   return "<link rel='stylesheet' href='" + jsPrefix + "assets/vendor.css'>" +
     "<link rel='stylesheet' href='" + jsPrefix + "assets/dummy.css'>" +
-    "<script src='" + jsPrefix + "assets/vendor.js'></script>" +
-    "<script src='" + jsPrefix + "assets/dummy.js'></script>";
+    "<script src='" + cssPrefix + "assets/vendor.js'></script>" +
+    "<script src='" + cssPrefix + "assets/dummy.js'></script>";
 
 
 }
@@ -46,7 +46,7 @@ module.exports = {
           break;
       }
 
-      return contentString;
+      return includeStatements;
 
 
     }
